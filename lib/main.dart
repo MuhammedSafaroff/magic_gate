@@ -66,6 +66,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 ActionButton(
                   onTap: () async {
                     await ConnectionApi.sendMessage("GPIO,12,1");
+                    await Future.delayed(const Duration(milliseconds: 400));
                     await ConnectionApi.sendMessage("GPIO,12,0");
                   },
                   icon: Icons.arrow_drop_up_rounded,
@@ -75,6 +76,8 @@ class _MyHomePageState extends State<MyHomePage> {
                 ActionButton(
                   onTap: () async {
                     await ConnectionApi.sendMessage("GPIO,4,1");
+                    await Future.delayed(const Duration(milliseconds: 400));
+
                     await ConnectionApi.sendMessage("GPIO,4,0");
                   },
                   icon: Icons.stop_rounded,
@@ -83,6 +86,8 @@ class _MyHomePageState extends State<MyHomePage> {
                 ActionButton(
                   onTap: () async {
                     await ConnectionApi.sendMessage("GPIO,5,1");
+                    await Future.delayed(const Duration(milliseconds: 400));
+
                     await ConnectionApi.sendMessage("GPIO,5,0");
                   },
                   icon: Icons.arrow_drop_down_rounded,
